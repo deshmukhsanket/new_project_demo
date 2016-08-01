@@ -17,7 +17,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     url: "/",
     templateUrl: "views/template.html",
     controller: 'HomeCtrl'
-  });
+  })
+  .state('new', {
+  url: "/new",
+  templateUrl: "views/template.html",
+  controller: 'NewCtrl'
+});
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 });
